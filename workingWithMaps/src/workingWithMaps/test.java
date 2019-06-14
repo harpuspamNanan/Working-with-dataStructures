@@ -24,8 +24,17 @@ public class test
 			System.out.println(key+"   ::::   "+hMap.get(key));
 		}
 
+		TreeMap<Student, Float> studentTreeMap = new TreeMap<>();
+		studentTreeMap.put(new Student("Harpushpam", 23, "C0732134"), 34.6f);
 		
+		Set<Student> treeMapKeys = studentTreeMap.keySet();
 		
+		Iterator<Student> itTreeMap = treeMapKeys.iterator();
+		while(itTreeMap.hasNext())
+		{
+			Student key = itTreeMap.next();
+			System.out.println(key+"    :::::    "+studentTreeMap.get(key));
+		}
 		// ---------------------------- Hash Set --------------------------
 		
 		

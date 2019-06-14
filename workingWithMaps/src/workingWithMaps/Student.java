@@ -1,6 +1,8 @@
 package workingWithMaps;
 
-public class Student {
+public class Student implements Comparable<Student>
+{
+	
 
 	String name, studentId;
 	int age;
@@ -22,6 +24,13 @@ public class Student {
 		builder.append(age);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	@Override
+	public int compareTo(Student arg0) 
+	{
+		// TODO Auto-generated method stub
+		return  (name.compareTo(arg0.name));
 	}
 
 }
